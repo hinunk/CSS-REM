@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <script>
+        var a = 1 / window.devicePixelRatio
+        document.write(`<meta name="viewport" 
+content="initial-scale=${a},maximum-scale=${a}, minimum-scale=${a},user-scalable=no">`)
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        #sectionOne {
+            text-align: center;
+            border-bottom: 1px solid red;
+        }
+
+        #sectionOne>div:first-child {
+            background: #d8d8d8;
+            width: 2.28125rem;
+            height: 2.28125rem;
+            border-radius: 100%;
+            display: inline-block;
+            margin-top: 1.90625rem;
+            margin-bottom: 1.03125rem;
+        }
+
+        #sectionOne .show {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #sectionOne .show div {
+            background: #d8d8d8;
+            width: 4rem;
+            height: 0.75rem;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+
+        #sectionOne .show div:nth-child(1) {
+            margin-right: 0.5rem;
+        }
+
+        #sectionOne .show div:nth-child(2) {
+            margin-left: 0.5rem;
+        }
+
+        #sectionOne .show div:nth-child(3) {
+            margin-right: 0.5rem;
+        }
+
+        #sectionOne .show div:nth-child(4) {
+            margin-left: 0.5rem;
+        }
+        /*-----------------------------------*/
+
+        #sectionTwo {
+            background: #efefef;
+            overflow: hidden;
+        }
+
+        #sectionTwo h2 {
+            background: #d8d8d8;
+            border-radius: 0.4375rem;
+            width: 6.25rem;
+            height: 1.25rem;
+        }
+
+        #sectionTwo h2:first-child {
+            margin-top: 1.75rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0.59375rem;
+        }
+
+        #sectionTwo h2:nth-child(2) {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.4375rem;
+        }
+
+        #sectionTwo p {
+            background: #e8e8e8;
+            border-radius: 0.4375rem;
+            width: 7.8125rem;
+            height: 0.75rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #sectionTwo p:nth-child(3) {
+            margin-bottom: 0.59375rem;
+        }
+
+        #sectionTwo p:nth-child(4) {
+            margin-bottom: 1.5625rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="sectionOne">
+        <div></div>
+        <div class="show">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+
+    <section id="sectionTwo">
+        <h2></h2>
+        <h2></h2>
+        <P></P>
+        <P></P>
+    </section>
+
+    <script>
+        var viewportWidth = document.documentElement.clientWidth / window.devicePixelRatio //获取视口宽度
+        var scale = viewportWidth / 320  //获取放大比例  基于320像素
+        var setCss = `html{font-size: ${viewportWidth / 10 * window.devicePixelRatio}px;}`
+        var sheet = window.document.styleSheets[0]
+        sheet.insertRule(`${setCss}`, sheet.cssRules.length);
+        // console.log(style)
+        // document.write(`<style>${setCss}</style>`)
+    </script>
+</body>
+
+</html>
