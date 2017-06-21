@@ -128,12 +128,10 @@ content="initial-scale=${a},maximum-scale=${a}, minimum-scale=${a},user-scalable
 
     <script>
         var viewportWidth = document.documentElement.clientWidth / window.devicePixelRatio //获取视口宽度
-        var scale = viewportWidth / 320  //获取放大比例  基于320像素
+        // var scale = viewportWidth / 320  //获取放大比例  基于320像素
         var setCss = `html{font-size: ${viewportWidth / 10 * window.devicePixelRatio}px;}`
         var sheet = window.document.styleSheets[0]
         sheet.insertRule(`${setCss}`, sheet.cssRules.length);
-        // console.log(style)
-        // document.write(`<style>${setCss}</style>`)
     </script>
 </body>
 
